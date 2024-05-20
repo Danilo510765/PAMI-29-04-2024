@@ -1,8 +1,11 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { SignIn } from './Pages/SignIn';
+import { Routes } from "./src/routes";
 
 export default function App() {
   return (
-  <SignIn/>
+    <NavigationContainer>
+  <Routes/>
+  </NavigationContainer>
   );
 }
