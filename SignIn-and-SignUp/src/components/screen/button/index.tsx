@@ -10,9 +10,9 @@ do TouchableOpacity e exige uma propriedade adicional chamada title. O component
 componente Container */
 export const Button: React.FunctionComponent<ButtonProps> = ({ title, ...otherProps }: PropsWithChildren<ButtonProps>) => {
     /*
-        ...otherProps - permite que todas as propriedades contidas aqui sejam passadas como propriedades
-    para o Container
-    */
+ ...otherProps - permite que todas as propriedades contidas aqui sejam passadas como propriedades
+ para o Container
+ */
     return <Container{...otherProps}>
     <Title>{title}</Title>
     </Container>

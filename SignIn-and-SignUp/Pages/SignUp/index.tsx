@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { Button } from '../../../../src/components/screen/button';
-import { Input } from '../../../../src/components/screen/input';
+import { Button } from '../../../SignIn-and-SignUp/src/components/screen/button/';
+import { Input } from '../../../SignIn-and-SignUp/src/components/screen/input';
 import { Container, Content, Title } from './styles';
 
 
