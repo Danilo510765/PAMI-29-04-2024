@@ -2,8 +2,8 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { Button } from '../../src/components/screen/button';
 import { Input } from '../../src/components/screen/input';
-import { Container, Content, Title } from './styles';
-
+import { Container, Content, Title, Logo} from './styles';
+import favicon from '../assetsfavicon.png';
 
 export const SignIn: React.FunctionComponent = () => {
   return (
@@ -13,6 +13,7 @@ export const SignIn: React.FunctionComponent = () => {
     >
       <Container>
         <Content>
+          <Logo source={favicon}/>
           <Title>Login</Title>
           <Input placeholder="Email"/>
           <Input placeholder="Senha"/>
