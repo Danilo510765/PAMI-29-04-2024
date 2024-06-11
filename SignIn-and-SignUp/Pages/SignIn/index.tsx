@@ -1,12 +1,19 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { ScrollView } from 'react-native';
+import favicon from '../../assets/favicon.png';
 import { Button } from '../../src/components/screen/button';
 import { Input } from '../../src/components/screen/input';
-import { Container, Content, Title, Logo} from './styles';
-import favicon from '../assetsfavicon.png';
+import { Container, Content, CreateAccount, CreateAccountTitle, Icon, Logo, Title } from './styles';
 
-export const SignIn: React.FunctionComponent = () => {
+interface ScreenNavigationProp {
+    navigate: (screen: string) => void;
+  }   
+
+  export const SignIn: React.FunctionComponent = () => {
+    const navigation = useNavigation<ScreenNavigationProp>();
   return (
+    <>
     <ScrollView
      keyboardShouldPersistTaps="handled"
       contentContainerStyle={{ flex: 1 }}
@@ -21,5 +28,16 @@ export const SignIn: React.FunctionComponent = () => {
         </Content>
       </Container>
     </ScrollView>
+
+    <CreateAccount onPress={() => {
+        navigation.navigate('SignUp');
+      }}>
+      <Icon name="log-in"/>
+      <CreateAccountTitle> Criar uma Conta</CreateAccountTitle>
+    </CreateAccount>
+    
+    
+    </>
   );
+ 
 };
